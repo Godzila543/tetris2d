@@ -25,9 +25,10 @@ function Manager.getDown()
 end
 
 function Manager.draw()
+	Manager.stack[Manager.index]:update()
 	Manager.stack[Manager.index]:drawButtons()
 	Manager.stack[Manager.index]:draw()
-	Manager.stack[Manager.index]:update()
+
 end
 
 function Manager.keyPressed(k)

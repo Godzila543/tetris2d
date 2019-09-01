@@ -1,12 +1,13 @@
 function love.load()
+	Vector = require "vector"
 	Class = require "class"
 	State = require "state"
 	Manager = require "manager"
 	Button = require "button"
 	Manager.states[1] = require "title"
-	Manager.states[2] = require "board"
+	Manager.states[2] = require "mainGame"
 	Manager.push(Manager.states[1])
-	love.window.setMode( 800, 800)
+	love.window.setMode( 1280, 720)
 end
 
 function love.draw()
